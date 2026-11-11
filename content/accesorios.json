@@ -52,6 +52,16 @@
         "/assets/img/uploads/rodo-atras.jpg",
         "/assets/img/uploads/rodo-por-arriba.jpg"
       ]
+    },
+    {
+      "disponible": true,
+      "titulo": "Bolso de mano con flecos y cuentas",
+      "marca": "AfterShock",
+      "imagenes": [
+        "/assets/img/uploads/esvintage_11.jpg",
+        "/assets/img/uploads/esvintage_12.jpg"
+      ],
+      "descripcion": "Bolso de fiesta o clutch de estilo vintage con abalorios y flecos, similar a los modelos decorados con cuentas de color marfil o blanco y cierre metálico de boquilla."
     }
   ]
 }
