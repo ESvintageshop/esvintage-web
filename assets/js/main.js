@@ -14,11 +14,15 @@ function formatPrice(value) {
 function renderCard(item) {
   const sold = item.disponible === false;
   const img = (item.imagenes && item.imagenes[0]) || "";
+  const comprarBtn = !sold && item.enlace_compra
+    ? `<a class="btn-comprar" href="${item.enlace_compra}" target="_blank" rel="noopener">Comprar</a>`
+    : "";
   return `
     <div class="card${sold ? " sold" : ""}">
       <div class="thumb">${img ? `<img src="${img}" alt="${item.titulo || ""}" loading="lazy">` : ""}</div>
       <h3>${item.titulo || ""}</h3>
       <div class="price">${sold ? '<span class="sold-tag">Vendido</span>' : formatPrice(item.precio)}</div>
+      ${comprarBtn}
     </div>
   `;
 }
