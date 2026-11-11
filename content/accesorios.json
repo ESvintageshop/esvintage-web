@@ -1,3 +1,16 @@
 {
-  "items": []
+  "items": [
+    {
+      "disponible": true,
+      "titulo": "Prada Raso Pleated Clutch",
+      "marca": "PRADA",
+      "descripcion": "Bolso de mano tipo clutch de estilo pochette, de estética vintage y elegante, confeccionado en tejido de raso o satén plisado en un llamativo tono azul turquesa.",
+      "imagenes": [
+        "/assets/img/uploads/prada_clutch_1.jpg",
+        "/assets/img/uploads/prada_clutch_2.jpg",
+        "/assets/img/uploads/prada_clutch_3.jpg"
+      ],
+      "enlace_compra": "https://www.therealreal.com/products/women/handbags/clutches/prada-raso-pleated-clutch-7"
+    }
+  ]
 }
