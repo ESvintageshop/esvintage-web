@@ -21,7 +21,7 @@ function renderCard(item) {
     <div class="card${sold ? " sold" : ""}">
       <div class="thumb">${img ? `<img src="${img}" alt="${item.titulo || ""}" loading="lazy">` : ""}</div>
       <h3>${item.titulo || ""}</h3>
-      <div class="price">${sold ? '<span class="sold-tag">Vendido</span>' : formatPrice(item.precio)}</div>
+      <div class="price">${sold ? '<span class="sold-tag">Agotado</span>' : formatPrice(item.precio)}</div>
       ${comprarBtn}
     </div>
   `;

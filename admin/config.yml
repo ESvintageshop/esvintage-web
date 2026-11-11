@@ -62,7 +62,7 @@ collections:
                 widget: "list"
                 field: { name: "imagen", widget: "image" }
               - { name: "enlace_compra", label: "Link de compra (Vinted, Wallapop...)", widget: "string", required: false, hint: "Pega aquí el enlace del anuncio publicado. Si lo dejas vacío, no aparecerá botón de Comprar." }
-              - { name: "disponible", label: "Disponible (desmarcar si está vendida)", widget: "boolean", default: true }
+              - { name: "disponible", label: "Disponible (desmarcar si está agotada)", widget: "boolean", default: true }
 
   - name: "accesorios"
     label: "Accesorios"
@@ -84,7 +84,7 @@ collections:
                 widget: "list"
                 field: { name: "imagen", widget: "image" }
               - { name: "enlace_compra", label: "Link de compra (Vinted, Wallapop...)", widget: "string", required: false, hint: "Pega aquí el enlace del anuncio publicado. Si lo dejas vacío, no aparecerá botón de Comprar." }
-              - { name: "disponible", label: "Disponible (desmarcar si está vendido)", widget: "boolean", default: true }
+              - { name: "disponible", label: "Disponible (desmarcar si está agotado)", widget: "boolean", default: true }
 
   - name: "libros"
     label: "Libros"
@@ -106,4 +106,4 @@ collections:
                 widget: "list"
                 field: { name: "imagen", widget: "image" }
               - { name: "enlace_compra", label: "Link de compra (Vinted, Wallapop...)", widget: "string", required: false, hint: "Pega aquí el enlace del anuncio publicado. Si lo dejas vacío, no aparecerá botón de Comprar." }
-              - { name: "disponible", label: "Disponible (desmarcar si está vendido)", widget: "boolean", default: true }
+              - { name: "disponible", label: "Disponible (desmarcar si está agotado)", widget: "boolean", default: true }
