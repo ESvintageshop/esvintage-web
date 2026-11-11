@@ -62,6 +62,17 @@
         "/assets/img/uploads/esvintage_12.jpg"
       ],
       "descripcion": "Bolso de fiesta o clutch de estilo vintage con abalorios y flecos, similar a los modelos decorados con cuentas de color marfil o blanco y cierre metálico de boquilla."
+    },
+    {
+      "disponible": true,
+      "titulo": "Clutch rígido bicolor",
+      "marca": "HUSER",
+      "descripcion": "Bolso de fiesta con diseño rígido muy original, con cierre metálico y adorno colgante de bola roja con flecos. Ideal para bodas, eventos y ocasiones especiales.",
+      "imagenes": [
+        "/assets/img/uploads/esvintage_06.jpg",
+        "/assets/img/uploads/esvintage_07.jpg",
+        "/assets/img/uploads/esvintage_08-2.jpg"
+      ]
     }
   ]
 }
