@@ -20,6 +20,17 @@
         "/assets/img/uploads/bolso2-foto1.jpg",
         "/assets/img/uploads/bolso2-foto2.jpg"
       ]
+    },
+    {
+      "disponible": true,
+      "titulo": "Bolso clutch Christian Dior de edición limitada ",
+      "marca": "DIOR",
+      "descripcion": "Clutch o pochette vintage de Christian Dior de edición limitada (de la colección de John Galliano, alrededor de 2005), confeccionado en seda o tejido con cuentas y abalorios plateados en relieve ondulado, ribetes de cuero y cierre de solapa con una hebilla metálica grabada con el logotipo de Dior.",
+      "imagenes": [
+        "/assets/img/uploads/bolso_dior_estudio.jpg",
+        "/assets/img/uploads/esvintage_10.jpg",
+        "/assets/img/uploads/esvintage_09.jpg"
+      ]
     }
   ]
 }
