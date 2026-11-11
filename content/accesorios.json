@@ -11,6 +11,15 @@
         "/assets/img/uploads/prada_clutch_3.jpg"
       ],
       "enlace_compra": "https://www.therealreal.com/products/women/handbags/clutches/prada-raso-pleated-clutch-7"
+    },
+    {
+      "disponible": true,
+      "titulo": "Bolso estampado africano ",
+      "descripcion": "Bolso de mano tipo clutch o sobre, combinado con tela de estampado africano (estilo ankara) en tonos rojos y ocres y cuerpo inferior en color oscuro con cierre decorativo de madera.",
+      "imagenes": [
+        "/assets/img/uploads/bolso2-foto1.jpg",
+        "/assets/img/uploads/bolso2-foto2.jpg"
+      ]
     }
   ]
 }
