@@ -9,6 +9,8 @@
 
 * { box-sizing: border-box; }
 
+#nl-badge-frame { display: none !important; }
+
 html, body {
   margin: 0;
   padding: 0;
