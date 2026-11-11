@@ -6,6 +6,15 @@ media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
 
 collections:
+  - name: "paginas"
+    label: "Páginas"
+    files:
+      - name: "conocenos"
+        label: "Conócenos"
+        file: "content/conocenos.json"
+        fields:
+          - { name: "texto", label: "Texto de la página", widget: "text", hint: "Deja una línea en blanco entre párrafos." }
+
   - name: "ropa"
     label: "Ropa"
     files:

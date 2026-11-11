@@ -87,7 +87,21 @@ async function initHomePreview() {
   grid.innerHTML = all.slice(0, 8).map(renderCard).join("");
 }
 
+async function initAboutPage() {
+  const el = document.getElementById("conocenos-text");
+  if (!el) return;
+  try {
+    const res = await fetch("content/conocenos.json?v=" + Date.now());
+    const data = await res.json();
+    const parrafos = (data.texto || "").split(/\n\s*\n/);
+    el.innerHTML = parrafos.map((p) => `<p>${p.trim()}</p>`).join("");
+  } catch (e) {
+    el.innerHTML = "";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initStore();
   initHomePreview();
+  initAboutPage();
 });
