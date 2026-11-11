@@ -7,8 +7,34 @@ public_folder: "/assets/img/uploads"
 
 collections:
   - name: "paginas"
-    label: "Páginas"
+    label: "Páginas y ajustes generales"
     files:
+      - name: "ajustes"
+        label: "Ajustes generales (menú, redes sociales, email)"
+        file: "content/ajustes.json"
+        fields:
+          - { name: "nav_inicio", label: "Texto del menú: Inicio", widget: "string" }
+          - { name: "nav_productos", label: "Texto del menú: Productos", widget: "string" }
+          - { name: "nav_conocenos", label: "Texto del menú: Conócenos", widget: "string" }
+          - { name: "instagram", label: "Enlace de Instagram", widget: "string" }
+          - { name: "tiktok", label: "Enlace de TikTok", widget: "string" }
+          - { name: "email", label: "Email de contacto", widget: "string" }
+
+      - name: "home"
+        label: "Página de Inicio"
+        file: "content/home.json"
+        fields:
+          - { name: "hero_titulo", label: "Titular principal", widget: "string" }
+          - { name: "hero_subtitulo", label: "Subtítulo", widget: "string" }
+          - { name: "hero_boton", label: "Texto del botón", widget: "string" }
+          - { name: "seccion_titulo", label: "Título de la sección de productos destacados", widget: "string" }
+
+      - name: "tienda"
+        label: "Página de Productos (título)"
+        file: "content/tienda.json"
+        fields:
+          - { name: "titulo", label: "Título de la página", widget: "string" }
+
       - name: "conocenos"
         label: "Conócenos"
         file: "content/conocenos.json"

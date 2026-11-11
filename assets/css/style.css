@@ -3,6 +3,7 @@
   --color-ink: #1a1a1a;
   --color-line: #e3e0da;
   --color-muted: #8a8580;
+  --color-accent: #c79990;
   --maxw: 1180px;
 }
 
@@ -63,7 +64,7 @@ nav.main-nav a {
 
 nav.main-nav a:hover,
 nav.main-nav a.active {
-  border-color: var(--color-ink);
+  border-color: var(--color-accent);
 }
 
 /* Hero */
@@ -74,7 +75,16 @@ nav.main-nav a.active {
 
 .hero h1 {
   font-size: clamp(32px, 5vw, 56px);
-  margin: 0 0 18px;
+  margin: 0 0 14px;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: var(--color-accent);
 }
 
 .hero p {
@@ -133,7 +143,7 @@ section + section { border-top: 1px solid var(--color-line); }
 
 .cat-tabs button.active {
   color: var(--color-ink);
-  border-color: var(--color-ink);
+  border-color: var(--color-accent);
 }
 
 /* Product grid */
@@ -194,10 +204,45 @@ section + section { border-top: 1px solid var(--color-line); }
 /* Footer */
 footer {
   text-align: center;
-  padding: 36px 24px;
+  padding: 40px 24px 32px;
   color: var(--color-muted);
   font-size: 13px;
   border-top: 1px solid var(--color-line);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 16px;
+}
+
+.footer-social a {
+  color: var(--color-ink);
+  display: inline-flex;
+  transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--color-accent);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-email {
+  margin-bottom: 10px;
+}
+
+.footer-email a:hover {
+  color: var(--color-accent);
+}
+
+.footer-brand {
+  letter-spacing: 0.06em;
 }
 
 @media (max-width: 560px) {

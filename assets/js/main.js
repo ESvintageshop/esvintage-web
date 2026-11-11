@@ -100,8 +100,64 @@ async function initAboutPage() {
   }
 }
 
+async function initAjustes() {
+  try {
+    const res = await fetch("content/ajustes.json?v=" + Date.now());
+    const data = await res.json();
+
+    const navMap = {
+      "nav-inicio": data.nav_inicio,
+      "nav-productos": data.nav_productos,
+      "nav-conocenos": data.nav_conocenos,
+    };
+    Object.entries(navMap).forEach(([id, value]) => {
+      const el = document.getElementById(id);
+      if (el && value) el.textContent = value;
+    });
+
+    const ig = document.getElementById("social-instagram");
+    const tiktok = document.getElementById("social-tiktok");
+    const email = document.getElementById("contact-email");
+    if (ig && data.instagram) ig.href = data.instagram;
+    if (tiktok && data.tiktok) tiktok.href = data.tiktok;
+    if (email && data.email) {
+      email.href = "mailto:" + data.email;
+      email.textContent = data.email;
+    }
+  } catch (e) {}
+}
+
+async function initHome() {
+  const heroTitulo = document.getElementById("hero-titulo");
+  if (!heroTitulo) return;
+  try {
+    const res = await fetch("content/home.json?v=" + Date.now());
+    const data = await res.json();
+    if (data.hero_titulo) heroTitulo.textContent = data.hero_titulo;
+    const sub = document.getElementById("hero-subtitulo");
+    if (sub && data.hero_subtitulo) sub.textContent = data.hero_subtitulo;
+    const btn = document.getElementById("hero-boton");
+    if (btn && data.hero_boton) btn.textContent = data.hero_boton;
+    const secTitulo = document.getElementById("seccion-titulo");
+    if (secTitulo && data.seccion_titulo) secTitulo.textContent = data.seccion_titulo;
+  } catch (e) {}
+}
+
+async function initTiendaPage() {
+  const el = document.getElementById("tienda-titulo");
+  if (!el) return;
+  try {
+    const res = await fetch("content/tienda.json?v=" + Date.now());
+    const data = await res.json();
+    if (data.titulo) el.textContent = data.titulo;
+  } catch (e) {}
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initStore();
   initHomePreview();
   initAboutPage();
+  initAjustes();
+  initHome();
+  initTiendaPage();
 });
