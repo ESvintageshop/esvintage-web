@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  - name: "ropa"
+    label: "Ropa"
+    files:
+      - name: "ropa"
+        label: "Ropa"
+        file: "content/ropa.json"
+        fields:
+          - { name: "items", label: "Prendas", widget: "list", label_singular: "prenda"
+            , fields:
+              - { name: "titulo", label: "Nombre", widget: "string" }
+              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float" }
+              - { name: "descripcion", label: "Descripción", widget: "text", required: false }
+              - { name: "talla", label: "Talla", widget: "string", required: false }
+              - { name: "imagenes", label: "Fotos", widget: "list", field: { name: "imagen", widget: "image" } }
+              - { name: "disponible", label: "Disponible (desmarcar si está vendida)", widget: "boolean", default: true }
+          }
+
+  - name: "accesorios"
+    label: "Accesorios"
+    files:
+      - name: "accesorios"
+        label: "Accesorios"
+        file: "content/accesorios.json"
+        fields:
+          - { name: "items", label: "Accesorios", widget: "list", label_singular: "accesorio"
+            , fields:
+              - { name: "titulo", label: "Nombre", widget: "string" }
+              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float" }
+              - { name: "descripcion", label: "Descripción", widget: "text", required: false }
+              - { name: "imagenes", label: "Fotos", widget: "list", field: { name: "imagen", widget: "image" } }
+              - { name: "disponible", label: "Disponible (desmarcar si está vendido)", widget: "boolean", default: true }
+          }
+
+  - name: "libros"
+    label: "Libros"
+    files:
+      - name: "libros"
+        label: "Libros"
+        file: "content/libros.json"
+        fields:
+          - { name: "items", label: "Libros", widget: "list", label_singular: "libro"
+            , fields:
+              - { name: "titulo", label: "Título", widget: "string" }
+              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float" }
+              - { name: "descripcion", label: "Descripción", widget: "text", required: false }
+              - { name: "imagenes", label: "Fotos", widget: "list", field: { name: "imagen", widget: "image" } }
+              - { name: "disponible", label: "Disponible (desmarcar si está vendido)", widget: "boolean", default: true }
+          }
