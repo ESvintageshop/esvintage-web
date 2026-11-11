@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto — ESvintage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="ESvintage"></a>
+      <nav class="main-nav">
+        <a id="nav-inicio" href="index.html">Inicio</a>
+        <a id="nav-productos" href="tienda.html" class="active">Productos</a>
+        <a id="nav-conocenos" href="conocenos.html">Conócenos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap producto-wrap" id="producto-wrap">
+      <a href="tienda.html" class="volver">← Volver a productos</a>
+
+      <div class="producto-grid">
+        <div class="producto-galeria">
+          <div class="producto-foto-principal">
+            <img id="producto-img-principal" src="" alt="">
+          </div>
+          <div class="producto-miniaturas" id="producto-miniaturas"></div>
+        </div>
+
+        <div class="producto-info">
+          <div class="brand" id="producto-marca"></div>
+          <h1 id="producto-titulo"></h1>
+          <p class="producto-talla" id="producto-talla" style="display:none;"></p>
+          <div class="price producto-precio" id="producto-precio"></div>
+          <p class="producto-agotado" id="producto-agotado" style="display:none;">Agotado</p>
+          <p class="producto-descripcion" id="producto-descripcion"></p>
+          <a class="btn-comprar" id="producto-comprar" href="#" target="_blank" rel="noopener">Comprar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap" id="producto-no-encontrado" style="display:none;">
+      <p class="empty-state">No hemos encontrado este producto. <a href="tienda.html">Volver a productos</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-social">
+        <a href="#" id="social-instagram" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" id="social-tiktok" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 3c.3 1.9 1.6 3.4 3.5 3.8v2.6c-1.3-.1-2.5-.5-3.5-1.2v6.1c0 3-2.4 5.4-5.4 5.4S3.7 17.3 3.7 14.3c0-2.8 2.1-5.1 4.8-5.4v2.7c-1.2.3-2.1 1.4-2.1 2.7 0 1.5 1.2 2.7 2.7 2.7s2.7-1.2 2.7-2.7V3h2.7z"/></svg>
+        </a>
+      </div>
+      <div class="footer-email"><a id="contact-email" href="mailto:info@esvintageshop.com">info@esvintageshop.com</a></div>
+      <div class="footer-brand">ESvintage</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

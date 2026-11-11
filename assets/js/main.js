@@ -11,16 +11,30 @@ function formatPrice(value) {
   return num.toFixed(2).replace(/\.00$/, "") + " €";
 }
 
-function renderCard(item) {
+function escapeHtml(str) {
+  return String(str || "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[c]));
+}
+
+function renderCard(item, cat, idx) {
   const sold = item.disponible === false;
   const img = (item.imagenes && item.imagenes[0]) || "";
-  const comprarBtn = !sold && item.enlace_compra
-    ? `<a class="btn-comprar" href="${item.enlace_compra}" target="_blank" rel="noopener">Comprar</a>`
+  const titulo = escapeHtml(item.titulo);
+  const marca = item.marca
+    ? `<div class="brand">${escapeHtml(item.marca)}</div>`
     : "";
+  const comprarBtn = !sold && item.enlace_compra
+    ? `<a class="btn-comprar" href="${escapeHtml(item.enlace_compra)}" target="_blank" rel="noopener">Comprar</a>`
+    : "";
+  const link = `producto.html?cat=${encodeURIComponent(cat)}&idx=${idx}`;
   return `
     <div class="card${sold ? " sold" : ""}">
-      <div class="thumb">${img ? `<img src="${img}" alt="${item.titulo || ""}" loading="lazy">` : ""}</div>
-      <h3>${item.titulo || ""}</h3>
+      <a class="thumb-link" href="${link}">
+        <div class="thumb">${img ? `<img src="${img}" alt="${titulo}" loading="lazy">` : ""}</div>
+      </a>
+      ${marca}
+      <h3><a href="${link}">${titulo}</a></h3>
       <div class="price">${sold ? '<span class="sold-tag">Agotado</span>' : formatPrice(item.precio)}</div>
       ${comprarBtn}
     </div>
@@ -60,7 +74,7 @@ async function initStore() {
       grid.innerHTML = `<p class="empty-state">Próximamente nuevas piezas en esta categoría.</p>`;
       return;
     }
-    grid.innerHTML = items.map(renderCard).join("");
+    grid.innerHTML = items.map((item, idx) => renderCard(item, active, idx)).join("");
   }
 
   tabs.querySelectorAll("button").forEach((btn) => {
@@ -82,13 +96,13 @@ async function initHomePreview() {
   const all = [];
   for (const cat of CATEGORIES) {
     const items = await loadCategory(cat);
-    all.push(...items);
+    items.forEach((item, idx) => all.push({ item, cat: cat.key, idx }));
   }
   if (all.length === 0) {
     grid.innerHTML = `<p class="empty-state">Muy pronto encontrarás aquí las primeras piezas.</p>`;
     return;
   }
-  grid.innerHTML = all.slice(0, 8).map(renderCard).join("");
+  grid.innerHTML = all.slice(0, 8).map(({ item, cat, idx }) => renderCard(item, cat, idx)).join("");
 }
 
 async function initAboutPage() {
@@ -98,7 +112,7 @@ async function initAboutPage() {
     const res = await fetch("content/conocenos.json?v=" + Date.now());
     const data = await res.json();
     const parrafos = (data.texto || "").split(/\n\s*\n/);
-    el.innerHTML = parrafos.map((p) => `<p>${p.trim()}</p>`).join("");
+    el.innerHTML = parrafos.map((p) => `<p>${escapeHtml(p.trim())}</p>`).join("");
   } catch (e) {
     el.innerHTML = "";
   }
@@ -157,6 +171,95 @@ async function initTiendaPage() {
   } catch (e) {}
 }
 
+async function initProductoPage() {
+  const tituloEl = document.getElementById("producto-titulo");
+  if (!tituloEl) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const catKey = params.get("cat");
+  const idx = parseInt(params.get("idx"), 10);
+  const cat = CATEGORIES.find((c) => c.key === catKey);
+  const wrap = document.getElementById("producto-wrap");
+  const notFound = document.getElementById("producto-no-encontrado");
+
+  if (!cat || Number.isNaN(idx)) {
+    if (wrap) wrap.style.display = "none";
+    if (notFound) notFound.style.display = "block";
+    return;
+  }
+
+  const items = await loadCategory(cat);
+  const item = items[idx];
+
+  if (!item) {
+    if (wrap) wrap.style.display = "none";
+    if (notFound) notFound.style.display = "block";
+    return;
+  }
+
+  document.title = (item.titulo || "Producto") + " — ESvintage";
+
+  const marcaEl = document.getElementById("producto-marca");
+  if (marcaEl) marcaEl.textContent = item.marca || "";
+
+  tituloEl.textContent = item.titulo || "";
+
+  const tallaEl = document.getElementById("producto-talla");
+  if (tallaEl) {
+    if (item.talla) {
+      tallaEl.textContent = "Talla: " + item.talla;
+      tallaEl.style.display = "block";
+    } else {
+      tallaEl.style.display = "none";
+    }
+  }
+
+  const descEl = document.getElementById("producto-descripcion");
+  if (descEl) descEl.textContent = item.descripcion || "";
+
+  const sold = item.disponible === false;
+  const precioEl = document.getElementById("producto-precio");
+  const agotadoEl = document.getElementById("producto-agotado");
+  const comprarEl = document.getElementById("producto-comprar");
+
+  if (sold) {
+    if (precioEl) precioEl.style.display = "none";
+    if (agotadoEl) agotadoEl.style.display = "block";
+    if (comprarEl) comprarEl.style.display = "none";
+  } else {
+    if (precioEl) precioEl.textContent = formatPrice(item.precio);
+    if (comprarEl) {
+      if (item.enlace_compra) {
+        comprarEl.href = item.enlace_compra;
+      } else {
+        comprarEl.style.display = "none";
+      }
+    }
+  }
+
+  const imagenes = (item.imagenes || []).filter(Boolean);
+  const mainImg = document.getElementById("producto-img-principal");
+  const miniaturas = document.getElementById("producto-miniaturas");
+
+  if (imagenes.length && mainImg) {
+    mainImg.src = imagenes[0];
+    mainImg.alt = item.titulo || "";
+  }
+
+  if (imagenes.length > 1 && miniaturas) {
+    miniaturas.innerHTML = imagenes
+      .map((src, i) => `<button type="button" class="miniatura${i === 0 ? " active" : ""}" data-src="${escapeHtml(src)}"><img src="${escapeHtml(src)}" alt=""></button>`)
+      .join("");
+    miniaturas.querySelectorAll(".miniatura").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        mainImg.src = btn.dataset.src;
+        miniaturas.querySelectorAll(".miniatura").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initStore();
   initHomePreview();
@@ -164,4 +267,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initAjustes();
   initHome();
   initTiendaPage();
+  initProductoPage();
 });
