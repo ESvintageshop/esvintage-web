@@ -31,6 +31,16 @@
         "/assets/img/uploads/esvintage_10.jpg",
         "/assets/img/uploads/esvintage_09.jpg"
       ]
+    },
+    {
+      "disponible": true,
+      "titulo": "Clutch con pedrería",
+      "marca": "INTREND",
+      "descripcion": "Clutch confeccionado en tejido recubierto de pedrería con asa rígida y cierre con botón. Interior forrado en color gris.",
+      "imagenes": [
+        "/assets/img/uploads/bolso_plata_estudio.jpg",
+        "/assets/img/uploads/brillos-interior-.jpg"
+      ]
     }
   ]
 }
