@@ -45,7 +45,7 @@ header.site-header {
 }
 
 .logo img {
-  height: 64px;
+  height: 96px;
   margin: 0 auto 18px;
 }
 
@@ -220,6 +220,7 @@ section + section { border-top: 1px solid var(--color-line); }
   text-align: center;
   color: var(--color-muted);
   padding: 40px 0 10px;
+  font-style: italic;
 }
 
 /* Product detail page */

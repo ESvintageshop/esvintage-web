@@ -71,7 +71,7 @@ async function initStore() {
       b.classList.toggle("active", b.dataset.cat === active);
     });
     if (items.length === 0) {
-      grid.innerHTML = `<p class="empty-state">Próximamente nuevas piezas en esta categoría.</p>`;
+      grid.innerHTML = `<p class="empty-state">Próximamente, nuevas piezas…</p>`;
       return;
     }
     grid.innerHTML = items.map((item, idx) => renderCard(item, active, idx)).join("");
@@ -99,7 +99,7 @@ async function initHomePreview() {
     items.forEach((item, idx) => all.push({ item, cat: cat.key, idx }));
   }
   if (all.length === 0) {
-    grid.innerHTML = `<p class="empty-state">Muy pronto encontrarás aquí las primeras piezas.</p>`;
+    grid.innerHTML = `<p class="empty-state">Próximamente, nuevas piezas…</p>`;
     return;
   }
   grid.innerHTML = all.slice(0, 8).map(({ item, cat, idx }) => renderCard(item, cat, idx)).join("");
