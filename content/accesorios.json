@@ -41,6 +41,17 @@
         "/assets/img/uploads/bolso_plata_estudio.jpg",
         "/assets/img/uploads/brillos-interior-.jpg"
       ]
+    },
+    {
+      "disponible": true,
+      "titulo": "Bolso de mano y bandolera de piel",
+      "marca": "RODO Italia",
+      "descripcion": "Bolso bandolera de piel blanca de Rodo. Es perfecto para salir una noche. Es un bolso resistente y robusto, con cierre de solapa enrollable. La correa también se puede guardar en el interior del bolso, transformándolo en un elegante bolso de mano tipo clutch. Es una auténtica pieza vintage de los años 80.",
+      "imagenes": [
+        "/assets/img/uploads/rodo-delante.jpg",
+        "/assets/img/uploads/rodo-atras.jpg",
+        "/assets/img/uploads/rodo-por-arriba.jpg"
+      ]
     }
   ]
 }
