@@ -55,7 +55,7 @@ collections:
             fields:
               - { name: "marca", label: "Marca", widget: "string", required: false, hint: "Se mostrará en mayúsculas sobre el nombre." }
               - { name: "titulo", label: "Nombre", widget: "string" }
-              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float" }
+              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float", required: false, hint: "Déjalo vacío si todavía no quieres poner precio." }
               - { name: "descripcion", label: "Descripción", widget: "text", required: false }
               - { name: "talla", label: "Talla", widget: "string", required: false }
               - name: "imagenes"
@@ -81,7 +81,7 @@ collections:
             fields:
               - { name: "marca", label: "Marca", widget: "string", required: false, hint: "Se mostrará en mayúsculas sobre el nombre." }
               - { name: "titulo", label: "Nombre", widget: "string" }
-              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float" }
+              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float", required: false, hint: "Déjalo vacío si todavía no quieres poner precio." }
               - { name: "descripcion", label: "Descripción", widget: "text", required: false }
               - name: "imagenes"
                 label: "Fotos"
@@ -106,7 +106,7 @@ collections:
             fields:
               - { name: "marca", label: "Autor / Editorial", widget: "string", required: false, hint: "Se mostrará en mayúsculas sobre el título." }
               - { name: "titulo", label: "Título", widget: "string" }
-              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float" }
+              - { name: "precio", label: "Precio (€)", widget: "number", value_type: "float", required: false, hint: "Déjalo vacío si todavía no quieres poner precio." }
               - { name: "descripcion", label: "Descripción", widget: "text", required: false }
               - name: "imagenes"
                 label: "Fotos"
