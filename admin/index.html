@@ -4,31 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel de contenido — ESvintage</title>
-  <script>
-    (function () {
-      var NETLIFY_HOST = "tourmaline-hummingbird-bd4e97.netlify.app";
-      if (location.hostname !== NETLIFY_HOST) {
-        location.replace("https://" + NETLIFY_HOST + "/admin/" + location.hash);
-      }
-    })();
-  </script>
 </head>
 <body>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.init({
-        APIUrl: "https://tourmaline-hummingbird-bd4e97.netlify.app/.netlify/identity"
-      });
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>

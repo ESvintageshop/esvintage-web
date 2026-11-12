@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ESvintageshop/esvintage-web
   branch: main
-  identity_url: https://tourmaline-hummingbird-bd4e97.netlify.app/.netlify/identity
-  gateway_url: https://tourmaline-hummingbird-bd4e97.netlify.app/.netlify/git
+  base_url: https://esvintage-cms-auth.teresalombardia008.workers.dev
+  auth_endpoint: auth
 
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
