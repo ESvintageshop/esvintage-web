@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: https://tourmaline-hummingbird-bd4e97.netlify.app/.netlify/identity
+  gateway_url: https://tourmaline-hummingbird-bd4e97.netlify.app/.netlify/git
 
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
