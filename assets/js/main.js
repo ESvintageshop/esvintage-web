@@ -102,7 +102,12 @@ async function initHomePreview() {
     grid.innerHTML = `<p class="empty-state">Próximamente, nuevas piezas…</p>`;
     return;
   }
-  grid.innerHTML = all.slice(0, 8).map(({ item, cat, idx }) => renderCard(item, cat, idx)).join("");
+  all.sort((a, b) => {
+    const da = a.item.fecha_subida ? new Date(a.item.fecha_subida).getTime() : 0;
+    const db = b.item.fecha_subida ? new Date(b.item.fecha_subida).getTime() : 0;
+    return db - da;
+  });
+  grid.innerHTML = all.slice(0, 4).map(({ item, cat, idx }) => renderCard(item, cat, idx)).join("");
 }
 
 async function initAboutPage() {

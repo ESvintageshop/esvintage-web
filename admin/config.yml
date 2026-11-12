@@ -64,6 +64,7 @@ collections:
                 field: { name: "imagen", widget: "image" }
                 hint: "La primera foto será la portada del producto. Arrastra las fotos (tirando del icono de la izquierda) para cambiar el orden."
               - { name: "enlace_compra", label: "Link de compra (Vinted, Wallapop...)", widget: "string", required: false, hint: "Pega aquí el enlace del anuncio publicado. Si lo dejas vacío, no aparecerá botón de Comprar." }
+              - { name: "fecha_subida", label: "Fecha de subida", widget: "datetime", required: false, hint: "Se rellena sola al crear el producto. No la toques (se usa para mostrar las últimas novedades en Inicio)." }
               - { name: "disponible", label: "Disponible (desmarcar si está agotada)", widget: "boolean", default: true }
 
   - name: "accesorios"
@@ -88,6 +89,7 @@ collections:
                 field: { name: "imagen", widget: "image" }
                 hint: "La primera foto será la portada del producto. Arrastra las fotos (tirando del icono de la izquierda) para cambiar el orden."
               - { name: "enlace_compra", label: "Link de compra (Vinted, Wallapop...)", widget: "string", required: false, hint: "Pega aquí el enlace del anuncio publicado. Si lo dejas vacío, no aparecerá botón de Comprar." }
+              - { name: "fecha_subida", label: "Fecha de subida", widget: "datetime", required: false, hint: "Se rellena sola al crear el producto. No la toques (se usa para mostrar las últimas novedades en Inicio)." }
               - { name: "disponible", label: "Disponible (desmarcar si está agotado)", widget: "boolean", default: true }
 
   - name: "libros"
@@ -112,4 +114,5 @@ collections:
                 field: { name: "imagen", widget: "image" }
                 hint: "La primera foto será la portada del producto. Arrastra las fotos (tirando del icono de la izquierda) para cambiar el orden."
               - { name: "enlace_compra", label: "Link de compra (Vinted, Wallapop...)", widget: "string", required: false, hint: "Pega aquí el enlace del anuncio publicado. Si lo dejas vacío, no aparecerá botón de Comprar." }
+              - { name: "fecha_subida", label: "Fecha de subida", widget: "datetime", required: false, hint: "Se rellena sola al crear el producto. No la toques (se usa para mostrar las últimas novedades en Inicio)." }
               - { name: "disponible", label: "Disponible (desmarcar si está agotado)", widget: "boolean", default: true }
