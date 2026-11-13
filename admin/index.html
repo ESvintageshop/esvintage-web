@@ -7,5 +7,19 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    if (window.CMS) {
+      CMS.registerEventListener({
+        name: "preSave",
+        handler: ({ entry }) => {
+          const data = entry.get("data");
+          if (!data.get("fecha_subida")) {
+            return data.set("fecha_subida", new Date().toISOString());
+          }
+          return data;
+        },
+      });
+    }
+  </script>
 </body>
 </html>
