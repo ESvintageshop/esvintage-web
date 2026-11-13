@@ -82,6 +82,18 @@
         "/assets/img/uploads/esvintage_07.jpg",
         "/assets/img/uploads/esvintage_08-2.jpg"
       ]
+    },
+    {
+      "disponible": true,
+      "marca": "LANVIN",
+      "titulo": "Tote de Charol",
+      "precio": -11,
+      "descripcion": "Este tote de Lanvin está confeccionado en charol, con un brillo intenso que le da un aire sofisticado y muy de la casa francesa. Los herrajes dorados realzan el conjunto. Tiene asas y cadenas de hombro de eslabones, así que se puede llevar en la mano o al hombro con la misma elegancia. Los bordes van rematados en grosgrain, un detalle discreto que refuerza su acabado cuidado. El interior está forrado en jacquard con el logo de la firma y tiene tres bolsillos para tenerlo todo organizado. Al ser abierto por arriba, se usa con mucha comodidad en el día a día sin renunciar al estilo. Es una pieza versátil y atemporal, perfecta tanto para el trabajo como para una ocasión especial.",
+      "imagenes": [
+        "/assets/img/uploads/lanvin_2.jpg",
+        "/assets/img/uploads/lanvin_1.jpg",
+        "/assets/img/uploads/lanvin_3.jpg"
+      ]
     }
   ]
 }
