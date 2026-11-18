@@ -11,7 +11,7 @@
         "/assets/img/uploads/prada_clutch_2.jpg",
         "/assets/img/uploads/prada_clutch_3.jpg"
       ],
-      "enlace_compra": "https://es.vestiairecollective.com/mujer-bolsos/clutchs/prada/bolsos-clutch-prada-de-seda-azul-73632935.shtml"
+      "enlace_compra": "https://es.vestiairecollective.com/mujer-bolsos/clutchs/prada/bolsos-clutch-prada-de-seda-azul-73804141.shtml"
     },
     {
       "disponible": true,
@@ -34,7 +34,7 @@
         "/assets/img/uploads/esvintage_10.jpg",
         "/assets/img/uploads/esvintage_09.jpg"
       ],
-      "enlace_compra": "https://es.vestiairecollective.com/mujer-bolsos/clutchs/dior/bolsos-clutch-dior-de-seda-otro-73634009.shtml"
+      "enlace_compra": ""
     },
     {
       "disponible": true,
@@ -58,7 +58,7 @@
         "/assets/img/uploads/rodo-atras.jpg",
         "/assets/img/uploads/rodo-por-arriba.jpg"
       ],
-      "enlace_compra": "https://es.vestiairecollective.com/mujer-bolsos/bolsos-de-mano/rodo/bolsos-de-mano-rodo-de-piel-blanco-73637016.shtml"
+      "enlace_compra": ""
     },
     {
       "disponible": true,
@@ -95,5 +95,6 @@
         "/assets/img/uploads/lanvin_3.jpg"
       ]
     }
-  ]
+  ],
+  "fecha_subida": "2026-11-18T11:12:06.965Z"
 }
