@@ -94,7 +94,20 @@
         "/assets/img/uploads/lanvin_1.jpg",
         "/assets/img/uploads/lanvin_3.jpg"
       ]
+    },
+    {
+      "disponible": true,
+      "marca": "ZAGLIANI",
+      "titulo": "Bolso Puffy de piel negra",
+      "descripcion": "El Puffy es el modelo más conocido de Zagliani, la firma italiana de bolsos artesanales. Este está hecho en piel negra con un acabado arrugado y brillante, y tiene la silueta abombada y plisada que caracteriza a este icono de los 2000. La parte superior es rígida, con una tira de piel horizontal y cierre metálico, y lleva dos asas redondas para llevarlo en la mano o al antebrazo. El interior está forrado en ante marrón y es muy amplio, con compartimentos para tenerlo todo ordenado. Hecho a mano en Italia.",
+      "imagenes": [
+        "/assets/img/uploads/bolso_negro_a_2.jpg",
+        "/assets/img/uploads/bolso_negro_b_2.jpg",
+        "/assets/img/uploads/bolso_negro_c_2.jpg",
+        "/assets/img/uploads/bolso_negro_d_2.jpg",
+        "/assets/img/uploads/bolso_negro_e_2.jpg"
+      ]
     }
   ],
-  "fecha_subida": "2026-11-18T11:12:06.965Z"
+  "fecha_subida": "2026-11-19T11:15:38.609Z"
 }
