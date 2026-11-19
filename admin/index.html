@@ -12,9 +12,16 @@
       CMS.registerEventListener({
         name: "preSave",
         handler: ({ entry }) => {
-          const data = entry.get("data");
-          if (!data.get("fecha_subida")) {
-            return data.set("fecha_subida", new Date().toISOString());
+          let data = entry.get("data");
+          const items = data.get("items");
+          if (items && typeof items.map === "function") {
+            const updated = items.map((item) => {
+              if (item && typeof item.get === "function" && !item.get("fecha_subida")) {
+                return item.set("fecha_subida", new Date().toISOString());
+              }
+              return item;
+            });
+            data = data.set("items", updated);
           }
           return data;
         },
