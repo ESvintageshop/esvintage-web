@@ -21,7 +21,8 @@
       "imagenes": [
         "/assets/img/uploads/bolso2-foto1.jpg",
         "/assets/img/uploads/bolso2-foto2.jpg"
-      ]
+      ],
+      "enlace_compra": "https://www.vinted.es/items/10879812044-bolso-estampado-africano"
     },
     {
       "disponible": true,
@@ -45,14 +46,15 @@
       "imagenes": [
         "/assets/img/uploads/bolso_plata_estudio.jpg",
         "/assets/img/uploads/brillos-interior-.jpg"
-      ]
+      ],
+      "enlace_compra": "https://www.vinted.es/items/10879828807-clutch-con-pedreria"
     },
     {
       "disponible": true,
       "fecha_subida": "2026-11-11T15:52:48.000Z",
       "titulo": "Bolso de mano y bandolera de piel",
       "marca": "RODO Italia",
-      "descripcion": "Bolso bandolera de piel blanca de Rodo. Es perfecto para salir una noche. Es un bolso resistente y robusto, con cierre de solapa enrollable. La correa también se puede guardar en el interior del bolso, transformándolo en un elegante bolso de mano tipo clutch. Es una auténtica pieza vintage de los años 80.",
+      "descripcion": "Bolso bandolera de Rodo en piel blanca, una auténtica pieza vintage de los años 80. Es resistente y bien estructurado, con cierre de solapa enrollable, y perfecto para una noche fuera. La correa se puede guardar dentro, así que en un momento pasa a ser un elegante bolso de mano tipo clutch.\n\nAl ser una pieza vintage, tiene las imperfecciones propias del uso y del paso del tiempo, y algunas zonas de la piel están algo amarillentas. Todos los detalles se ven en las fotos.",
       "imagenes": [
         "/assets/img/uploads/rodo-delante.jpg",
         "/assets/img/uploads/rodo-atras.jpg",
@@ -69,7 +71,8 @@
         "/assets/img/uploads/esvintage_11.jpg",
         "/assets/img/uploads/esvintage_12.jpg"
       ],
-      "descripcion": "Bolso de fiesta o clutch de estilo vintage con abalorios y flecos, similar a los modelos decorados con cuentas de color marfil o blanco y cierre metálico de boquilla."
+      "descripcion": "Bolso de fiesta o clutch de estilo vintage con abalorios y flecos, similar a los modelos decorados con cuentas de color marfil o blanco y cierre metálico de boquilla.",
+      "enlace_compra": "https://www.vinted.es/items/10879890436-bolso-de-mano-con-flecos-y-cuentas"
     },
     {
       "disponible": true,
@@ -81,7 +84,8 @@
         "/assets/img/uploads/esvintage_06.jpg",
         "/assets/img/uploads/esvintage_07.jpg",
         "/assets/img/uploads/esvintage_08-2.jpg"
-      ]
+      ],
+      "enlace_compra": "https://www.vinted.es/items/10879871231-bolso-de-mano-rigido"
     },
     {
       "disponible": true,
