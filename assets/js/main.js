@@ -19,7 +19,7 @@ function escapeHtml(str) {
 
 function renderCard(item, cat, idx) {
   const sold = item.disponible === false;
-  const img = item.imagen_flotante || (item.imagenes && item.imagenes[0]) || "";
+  const img = (item.imagenes && item.imagenes[0]) || "";
   const titulo = escapeHtml(item.titulo);
   const marca = item.marca
     ? `<div class="brand">${escapeHtml(item.marca)}</div>`
