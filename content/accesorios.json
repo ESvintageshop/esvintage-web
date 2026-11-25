@@ -114,6 +114,20 @@
         "/assets/img/uploads/bolso_negro_e_2.jpg"
       ],
       "enlace_compra": "https://es.vestiairecollective.com/mujer-bolsos/bolsos-de-mano/zagliani/bolsos-de-mano-zagliani-de-piel-negro-73949597.shtml"
+    },
+    {
+      "disponible": true,
+      "marca": "Tod's",
+      "titulo": "Bolso de cuero marrón",
+      "descripcion": "Elegante bolso vintage de Tod's confeccionado en piel granulada color camel, con un diseño clásico, sofisticado y atemporal.\n\nCuenta con dos asas largas, cierre de solapa con el logotipo de Tod's grabado, costuras en contraste y detalles metálicos plateados. Su tono cálido y su silueta estructurada lo convierten en un complemento perfecto para el día a día.\n\nEstado y detalles de uso:\n\nEl exterior se encuentra en buen estado vintage, con ligeras arrugas, pequeños roces en los bordes y esquinas y marcas de uso propias del paso del tiempo.\n\nEl interior presenta manchas visibles y signos de uso en el forro de tela beige, especialmente en la base y algunas zonas laterales, tal como se muestra en las fotografías.\n\nUna pieza vintage con carácter, ideal para quienes valoran los diseños clásicos y la calidad de la marroquinería.\n\nSe recomienda revisar todas las fotografías para apreciar su estado y detalles.",
+      "imagenes": [
+        "/assets/img/uploads/tods.-delantera.png",
+        "/assets/img/uploads/tods-trasera.png",
+        "/assets/img/uploads/tods-completo.png",
+        "/assets/img/uploads/tods-asa.png",
+        "/assets/img/uploads/tods_interior.png"
+      ],
+      "fecha_subida": "2026-11-25T12:48:23.956Z"
     }
   ]
 }
